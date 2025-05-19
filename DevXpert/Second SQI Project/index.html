@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="./Landing Page/index.css">
+    <link rel="stylesheet" href="./Landing Page/media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bodyo">
+    <header class="headear">
+        
+        
+        <nav>
+            <div class="nov">
+              <!-- <a href="../index.html"><img style="border: medium solid rgba(255, 0, 0, 0); margin-left: 60px; margin-top: 30px; border-radius: 50%; height: 190px; width: 190px;" src="./images/hospital management system logo.png" alt="">    </a> -->
+
+                <div><h1 class="log">MediTech(HMS)</h1></div>
+                <ul class="nav-links-1">
+                    <li class="lo-1"><a href="#"><p class="la-1">Find Doctors</p></a></li>
+                    <li class="lo-1"><a href="#"><p class="la-1">Video Consult</p></a></li>
+                    <li class="lo-1"><a href="#"><p class="la-1">Surgeries</p></a></li>
+                </ul>
+                <ul class="nav-links-2">
+                    <li class="lo-2">
+                        <a href="#" class="la-2">For Corporates</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </li>
+                    <li class="lo-2">
+                        <a href="#" class="la-2">For Provider</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                          </svg>
+                    </li>
+                    <li class="lo-2">
+                        <a href="#" class="la-2">Security & help</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </li>
+                    <!-- <div class="ref"><a href="#" class="la"><button class="bt">Login/Signup</button></a></div> -->
+                     <a href="./SignUp Folder/index.html" class="ref"><button class="bt">Login/Signup</button></a>
+                </ul>
+                <a href="./SignUp Folder/index.html">
+                  <div class="menu-toggle"><a href="./SignUp Folder/index.html"><button class="bt0">Login</button></a></div>
+                </a>
+              </div>
+        </nav>
+    </header>
+    <section class="sec1">
+        <div class="doc-1"> 
+            <button style="margin-bottom: 30px;" id="use-location-btn">📍 Use My Location</button>
+
+            <form id="smart-form">
+              <div id="form-error"></div>
+        
+              <div class="form-row">
+                <div class="input-box">
+                  <i class="fas fa-location-dot"></i>
+                  <input type="text" id="location-input" placeholder="Search for a country..." autocomplete="off">
+                  <div class="dropdown" id="location-dropdown"></div>
+                </div>
+        
+                <div class="input-box">
+                  <i class="fas fa-stethoscope"></i>
+                  <input type="text" id="service-input" placeholder="Search for a service..." autocomplete="off">
+                  <div class="dropdown" id="service-dropdown"></div>
+                </div>
+              </div>
+        
+              <button  type="submit" id="submit-btn">Submit</button>
+            </form>
+        </div> 
+    </section>
+    <section class="sec2">
+        <div class="doc-2">
+            <div class="cod-1">
+                <div class="pu-1">
+                    <img class="pic-1" src="./Landing Page/images/male doc.png" alt="">
+                </div>
+                <div class="nwod-1">
+                    <h3 class="ah3-1">
+                        Instant Video Consultation
+                    </h3>
+                    <p class="pi-1">
+                        Connect within 60 secs
+                    </p>
+                </div>
+            </div>
+            <div class="cod-2">
+                <div class="pu-2">
+                    <img class="pic-2" src="./Landing Page/images/dweb_find_doctors.png" alt="">
+                </div>
+                <div class="nwod-2">
+                    <h3 class="ah3-2">
+                        Find Doctors Near You
+                    </h3>
+                    <p class="pi-2">
+                        Confirmed appointments
+                    </p>
+                </div>
+            </div>  
+            <div class="cod-3">
+                <div class="pu-3">
+                    <img class="pic-3" src="./Landing Page/images/female doc  surgeries.png" alt="">
+                </div>
+                <div class="nwod-3">
+                    <h3 class="ah3-3">
+                        Surgeries
+                    </h3>
+                    <p class="pi-3">
+                        Safe and trusted surgery centers
+                    </p>
+                </div>
+            </div>      
+        </div>
+    </section>
+    <section class="sec-3">
+        <div class="consult-header">
+            <div>
+                <h2 class="ah2">Consult top doctors online for any health concern</h2>
+                <p class="po">Private online consultations with verified doctors in all specialists</p>
+          </div>
+          <div>
+            <a href="#" class="view-all-btn">View All Specialties</a>
+          </div>
+        </div>
+    
+        <div class="consult-grid">
+          <!-- Repeat this block for each specialty -->
+          <div class="consult-card">
+            <img class="gm" src="Landing Page/images/irregular-painful+period.png" alt="Period or Pregnancy" />
+            <p class="issue">Period doubts or Pregnancy</p>
+            <a href="#" class="consult-link">CONSULT NOW</a>
+          </div>
+      
+          <div class="consult-card">
+            <img class="gm" src="Landing Page/images/Acne.png" alt="Acne issues" />
+            <p class="issue">Acne, pimple or skin issues</p>
+            <a href="#" class="consult-link">CONSULT NOW</a>
+          </div>
+      
+          <div class="consult-card">
+              <img class="gm" src="Landing Page/images/top-speciality-sexology.svg" alt="Performance issues" />
+              <p class="issue">Performance issues in bed</p>
+              <a href="#" class="consult-link">CONSULT NOW</a>
+            </div>
+
+            <div class="consult-card">
+                <img class="gm" src="Landing Page/images/coughing.png" alt="Cold, cough or fever" />
+                <p class="issue">Cold, cough or fever</p>
+                <a href="#" class="consult-link">CONSULT NOW</a>
+            </div>
+
+            <div class="consult-card">
+                <img class="gm" src="Landing Page/images/top-speciality-pediatric.svg" alt="Child not feeling well" />
+                <p class="issue">Child not feeling well</p>
+                <a href="#" class="consult-link">CONSULT NOW</a>
+            </div>
+
+          <div class="consult-card">
+            <img class="gm" src="Landing Page/images/12-mental-wellness.png" alt="Depression or anxiety" />
+            <p class="issue">Depression or anxiety</p>
+            <a href="#" class="consult-link">CONSULT NOW</a>
+          </div>
+        </div><br><br>
+        <hr class="rh">
+    </section>
+    <section class="sec-4">
+        <div class="carousel-wrapper">
+            <button class="scroll-btn left" onclick=" scrollLeft()">‹</button>
+            <button class="scroll-btn left" onclick="scrollLeft()">&#8249;</button> <!-- Left arrow -->
+
+            <div class="carousel" id="appointmentCards">
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-dentist@2x.jpg" alt="dentist" />
+                <h4>Dentist</h4>
+                <p>Teething troubles? Schedule a checkup</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-gynecologist@2x.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-dietitian@2x.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-physiotherapist@2x.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-general-surgeon@2x.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/sp-orthopedist@2x.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/doc.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/baby.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <div class="appointment-card">
+                <img class="sps" src="Landing Page/images/mestrution.jpg" alt="gyne" />
+                <h4>Gynecologist</h4>
+                <p>Explore pregnancy & fertility care</p>
+                <a href="#" class="book-btn">Book Now</a>
+              </div>
+              <!-- Add more cards here -->
+            </div>
+        
+            <button class="scroll-btn right" onclick="scrollRight()">›</button>
+            <button class="scroll-btn right" onclick="scrollRight()">&#8250;</button> <!-- Right arrow -->
+        </div>
+    </section>
+    <section class="sec-5">
+        <div class="docc">
+            <div class="articles-text">
+                <h2 class="h2a">Read top articles from health experts</h2>
+                <p class="pip">Health articles that keep you informed about good health practices and achieve your goals.</p>
+                <a href="#" class="see-all-btn">See all articles</a>
+            </div>
+            
+            <div class="articles-grid">
+                <!-- Article Card 1 -->
+                <div class="article-card">
+                  <img src="Landing Page/images/injection.png" alt="Article 1">
+                  <span class="category">CORONAVIRUS</span>
+                  <h4 class="title">12 Coronavirus Myths and Facts That You Should Be Aware Of</h4>
+                  <p class="author">Dr. Diana Borgio</p>
+                </div>
+            
+                <!-- Article Card 2 -->
+                <div class="article-card">
+                  <img src="Landing Page/images/vgetable.png" alt="Article 2">
+                  <span class="category">VITAMINS AND SUPPLEMENTS</span>
+                  <h4 class="title">Eating Right to Build Immunity Against Cold and Viral Infections</h4>
+                  <p class="author">Dr. Diana Borgio</p>
+                </div>
+            </div>
+      
+        </div>
+    </section>
+    <section class="sec-6">
+        <h2 class="h22h">What our users have to say</h2>
+        <div class="testimonial-carousel">
+          <div class="testimonial-track">
+            <!-- Slide 1 -->
+            <div class="testimonial-card">
+              <p class="p0p">Very good app. Well thought out about booking/rescheduling/canceling an appointment. Also, Doctor's feedback mechanism is good and describes all the basics in a good way</p>
+              <div class="testimonial-user">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User">
+                <span>Avinash Kumar</span>
+              </div>
+            </div>
+      
+            <!-- Slide 2 -->
+            <div class="testimonial-card">
+              <p class="p0p">Wonderful experience with the platform. Booking appointments was quick and smooth. I’d highly recommend it to others.</p>
+              <div class="testimonial-user">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User">
+                <span>Sandra Joseph</span>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="testimonial-card">
+              <p class="p0p">Love the clean interface and helpful doctors. The appointment reminders and tracking features are really useful!</p>
+              <div class="testimonial-user">
+                <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="User">
+                <span>Michael Lee</span>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Arrows -->
+          <button class="arrow left">&#10094;</button>
+          <button class="arrow right">&#10095;</button>
+      
+          <!-- Dots -->
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </section>
+      <section class="sec-7">
+        <div class="container">
+          <div class="app-left">
+            <div class="">
+              <a href="#"><img class="grand-patien" style="height: 400px;" src="Landing Page/images/patien con ver sa tion.png" alt="Google Play"></a>
+              <!-- <img src="https://i.postimg.cc/kGRn9D8R/doctor.png" alt="Doctor" class="doctor-img"> -->
+              <!-- <img src="https://i.postimg.cc/5NjYrxWk/patient.png" alt="Patient" class="patient-img"> -->
+              <!-- <div class="call-icon">&#128222;</div> -->
+              <div class="logo">practo<span class="dot"></span></div>
+            </div>
+          </div>
+          <div class="app-right">
+            <h2>Download the Practo app</h2>
+            <p>
+              Access video consultation with India’s top doctors on the Practo app.<br />
+              Connect with doctors online, available 24/7, from the comfort of your home.
+            </p>
+            <div class="sms-form">
+              <span class="code">+91</span>
+              <input type="tel" placeholder="Enter phone number" />
+              <button>Send SMS</button>
+            </div>
+            <div class="store-buttons">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>Practo</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>For patients</h4>
+            <ul>
+              <li><a href="#">Search for doctors</a></li>
+              <li><a href="#">Search for clinics</a></li>
+              <li><a href="#">Search for hospitals</a></li>
+              <li><a href="#">Practo Plus</a></li>
+              <li><a href="#">Covid Hospital listing</a></li>
+              <li><a href="#">Practo Care Clinics</a></li>
+              <li><a href="#">Read health articles</a></li>
+              <li><a href="#">Read about medicines</a></li>
+              <li><a href="#">Practo drive</a></li>
+              <li><a href="#">Health app</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>For doctors</h4>
+            <ul>
+              <li><a href="#">Practo Profile</a></li>
+            </ul>
+            <h4>For clinics</h4>
+            <ul>
+              <li><a href="#">Ray by Practo</a></li>
+              <li><a href="#">Practo Reach</a></li>
+              <li><a href="#">Ray Tab</a></li>
+              <li><a href="#">Practo Pro</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>For hospitals</h4>
+            <ul>
+              <li><a href="#">Insta by Practo</a></li>
+              <li><a href="#">Qikwell by Practo</a></li>
+              <li><a href="#">Practo Profile</a></li>
+              <li><a href="#">Practo Reach</a></li>
+              <li><a href="#">Practo Drive</a></li>
+            </ul>
+            <h4>For Corporates</h4>
+            <ul>
+              <li><a href="#">Wellness Plans</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-column">
+            <h4>More</h4>
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">PCS T&C</a></li>
+              <li><a href="#">Healthcare Directory</a></li>
+              <li><a href="#">Practo Health Wiki</a></li>
+            </ul>
+            <h4>Social</h4>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Youtube</a></li>
+              <li><a href="#">Github</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <img src="Landing Page/images/paracto.svg" alt="Practo Logo" class="footer-logo" />
+          <p>&copy; 2017, Practo. All rights reserved.</p>
+        </div>
+      </footer>    
+    </body>
+    <script src="./Landing Page/index.js"></script>  
+     <script> 
+     module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#2563eb',  // Your main brand color
+        secondary: '#1e40af',
+        light: '#f1f5f9',
+        dark: '#0f172a',
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+    // Toggle the mobile menu
+    function toggleMenu() {
+        let navLinks = document.querySelector('.nav-links-1, .nav-links-2');
+        navLinks.classList.toggle('active');
+    }
+    const locationInput = document.getElementById("location-input");
+    const locationDropdown = document.getElementById("location-dropdown");
+    const serviceInput = document.getElementById("service-input");
+    const serviceDropdown = document.getElementById("service-dropdown");
+    const formError = document.getElementById("form-error");
+    
+    async function fetchCountries(query) {
+      if (!query) return [];
+      try {
+        const res = await fetch(`https://restcountries.com/v3.1/name/${query}`);
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          return data.map(country => ({
+            name: country.name.common,
+            flag: country.flags?.png || "🌍"
+          }));
+        }
+        return [];
+      } catch (e) {
+        console.error(e);
+        return [];
+      }
+    }
+    
+    const serviceList = [
+      "Dentist", "Cardiologist", "ENT", "Pediatrician", "General Clinic",
+      "Eye Clinic", "Maternity", "Orthopedic", "Radiology", "Oncology",
+      "Neurologist", "Urologist", "Dermatologist", "Psychiatrist", "Gastroenterologist",
+      "Surgeon", "Chiropractor", "Nutritionist", "Pathologist", "Ambulance Service",
+      "Physiotherapist", "Hearing Center", "Fertility Clinic", "Pain Management"
+    ];
+    
+    function filterServiceList(query) {
+      return serviceList.filter(service =>
+        service.toLowerCase().includes(query.toLowerCase())
+      ).map(name => ({ name }));
+    }
+    
+    function showDropdown(inputEl, dropdownEl, items, hasFlags = false) {
+      dropdownEl.innerHTML = '';
+      if (items.length === 0) {
+        dropdownEl.innerHTML = `<p class='no-match'>No match found</p>`;
+      } else {
+        items.forEach(item => {
+          const p = document.createElement('p');
+          if (hasFlags && item.flag) {
+            const img = document.createElement('img');
+            img.src = item.flag;
+            img.alt = item.name;
+            img.className = 'flag';
+            img.style.width = '20px';
+            img.style.height = '14px';
+            p.appendChild(img);
+            const style = document.createElement("style");
+            style.textContent = `
+              .dropdown {
+                display: flex;
+                flex-direction: column;
+                background-color: #ffffff;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                margin-top:-150px;
+                overflow-y: auto;
+                line-height: 0px;
+                z-index: 10;
+              }
+                
+              .dropdown p {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                gap: 10px;
+                background-color: #f9f9f9;
+                cursor: pointer;
+              }
+                
+              .dropdown p:hover {
+                background-color: #e0f0ff;
+              }
+            `;
+            document.head.appendChild(style);
+    
+          } else {
+            const icon = document.createElement('i');
+            icon.className = 'fas fa-circle-dot';
+            icon.style.color = '#007bff';
+            p.appendChild(icon);
+          }
+          p.appendChild(document.createTextNode(item.name));
+          p.addEventListener('click', () => {
+            inputEl.value = item.name;
+            dropdownEl.classList.remove('show');
+          });
+          dropdownEl.appendChild(p);
+        });
+      }
+      dropdownEl.classList.add('show');
+    }
+    
+    locationInput.addEventListener('input', async () => {
+      const query = locationInput.value.trim();
+      if (query.length < 1) {
+        locationDropdown.classList.remove('show');
+        return;
+      }
+      const countries = await fetchCountries(query);
+      showDropdown(locationInput, locationDropdown, countries, true);
+    });
+    
+    serviceInput.addEventListener('input', () => {
+      const query = serviceInput.value.trim();
+      if (query.length < 1) {
+        serviceDropdown.classList.remove('show');
+        return;
+      }
+      const services = filterServiceList(query);
+      showDropdown(serviceInput, serviceDropdown, services);
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.input-box')) {
+        locationDropdown.classList.remove('show');
+        serviceDropdown.classList.remove('show');
+      }
+    });
+    
+    document.getElementById('use-location-btn').addEventListener('click', async () => {
+      try {
+        const res = await fetch("https://ipapi.co/json");
+        const data = await res.json();
+        const country = data.country_name;
+        if (country) {
+          locationInput.value = country;
+        } else {
+          formError.textContent = "Could not detect your location.";
+          formError.style.display = "block";
+        }
+      } catch (err) {
+        formError.textContent = "Error detecting location.";
+        formError.style.display = "block";
+        console.error(err);
+      }
+    });
+    
+    document.getElementById('smart-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const location = locationInput.value.trim();
+      const service = serviceInput.value.trim();
+    
+      if (!location || !service) {
+        formError.textContent = "Please fill out both Location and Service fields.";
+        formError.style.display = "block";
+        return;
+      }
+    
+      formError.style.display = "none";
+      formError.textContent = `Submitted Location: ${location} | Service: ${service}🩺`;
+      formError.style.display = "block";
+      formError.style.color = "green";
+      alert(`Submitted Location: ${location} | Service: ${service}`);
+    
+      // TODO: Add Firebase submission logic here
+    });
+    ``
+    
+    
+    
+    
+    container.addEventListener('scroll', () => {
+      console.log("Current scroll position:", container.scrollLeft);
+    });
+    
+      function scrollRight() {
+        document.getElementById("appointmentCards").scrollBy({
+          left: 300,
+          behavior: "smooth",
+        });
+      }
+    
+      function scrollLeft() {
+        document.getElementById("appointmentCards").scrollBy({
+          left: -300,
+          behavior: "smooth",
+        });
+      }
+    
+    
+      const track = document.querySelector('.testimonial-track');
+      const dots = document.querySelectorAll('.dot');
+      const leftArrow = document.querySelector('.arrow.left');
+      const rightArrow = document.querySelector('.arrow.right');
+    
+      let index = 0;
+    
+      function showSlide(i) {
+        track.style.transform = `translateX(-${i * 100}%)`;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[i].classList.add('active');
+      }
+    
+      rightArrow.addEventListener('click', () => {
+        index = (index + 1) % dots.length;
+        showSlide(index);
+      });
+    
+      leftArrow.addEventListener('click', () => {
+        index = (index - 1 + dots.length) % dots.length;
+        showSlide(index);
+      });
+    
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          index = i;
+          showSlide(index);
+        });
+      });
+    
+      // Auto scroll every 5 seconds
+      setInterval(() => {
+        index = (index + 1) % dots.length;
+        showSlide(index);
+      }, 5000);
+    
+      showSlide(index);
+    
+    
+    
+      const animatedElements = document.querySelectorAll('.animated');
+    
+      function showOnScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
+    
+        animatedElements.forEach(el => {
+          const rect = el.getBoundingClientRect().top;
+          if (rect < triggerBottom) {
+            el.classList.add(el.dataset.animation);
+          }
+        });
+      }
+    
+      window.addEventListener('scroll', showOnScroll);
+      window.addEventListener('load', showOnScroll);
+    </script>
+</html>

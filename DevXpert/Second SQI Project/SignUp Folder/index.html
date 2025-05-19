@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HMS Sign-Up Page</title>
+  <link rel="stylesheet" href="./index.css">
+  <!-- <link rel="stylesheet" href="../SignIn Folder/index.css"> -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+        <a href="../index.html">
+          <div class="mog">
+            <img class="imog" src="./images/hospital management system logo.png" alt="">    
+          </div>
+        </a>
+        <h1 class="log">MediTech(HMS)</h1>
+      
+      <!-- <img id="profile-preview" src="" alt="Profile Preview" style="display: none; max-width: 100px; margin-top: 10px; border-radius: 50%;" /> -->
+      <p>Welcome to HMS Admission Portal</p>
+      <p>Contact: +2349000000000</p>
+    </div>
+    <div class="right-section">
+        <h2>Create an Account</h2>
+        <p>Please fill out the details below to create an account.</p>
+        <form id="signup-form">
+          <!-- Full Name -->
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Full Name" required />
+          <small id="name-error" style="color: red;"></small>
+  
+          <!-- Email -->
+          <label for="email">Email</label>
+          <input type="email" id="signup-email" placeholder="Your Email" required />
+          <small id="email-error" style="color: red;"></small>
+  
+          <!-- Password -->
+          <label for="password">Password</label>
+          <input type="password" id="signup-password" placeholder="Password" required />
+          <small id="password-error" style="color: red;"></small>
+  
+          <!-- Role -->
+          <label for="role">Role</label>
+          <select id="role" required>
+            <option value="">Select Role</option>
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+          </select>
+          <small id="role-error" style="color: red;"></small>
+  
+          <!-- Doctor-specific Details -->
+          <div id="doctor-details" style="display: none;">
+            <h3>Doctor's Details</h3>
+            <label for="specialization">Specialization</label>
+            <input type="text" id="specialization" placeholder="Doctor's Specialization" />
+            <small id="specialization-error" style="color: red;"></small>
+  
+            <label for="license">Medical License Number</label>
+            <input type="text" id="license" placeholder="Medical License Number" />
+            <small id="license-error" style="color: red;"></small>
+  
+            <label for="experience">Years of Experience</label>
+            <input type="number" id="experience" placeholder="Years of Experience" />
+            <small id="experience-error" style="color: red;"></small>
+  
+            <label for="hospital">Hospital/Affiliation</label>
+            <input type="text" id="hospital" placeholder="Hospital/Affiliation" />
+            <small id="hospital-error" style="color: red;"></small>
+  
+            <label for="doctor-profile">Profile Picture</label>
+            <input type="file" id="doctor-profile" accept="image/*" />
+            <small id="doctor-pic-error" style="color: red;"></small>
+          </div>
+  
+          <!-- Patient-specific Details -->
+          <div id="patient-details" style="display: none;">
+            <h3>Patient's Details</h3>
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Patient's Age" />
+            <small id="age-error" style="color: red;"></small>
+  
+            <label for="medical-history">Medical History</label>
+            <textarea id="medical-history" placeholder="Patient's Medical History"></textarea>
+            <small id="history-error" style="color: red;"></small>
+  
+            <label for="allergies">Allergies</label>
+            <input type="text" id="allergies" placeholder="Known Allergies" />
+            <small id="allergies-error" style="color: red;"></small>
+  
+            <label for="current-medication">Current Medication</label>
+            <input type="text" id="current-medication" placeholder="Current Medication" />
+            <small id="medication-error" style="color: red;"></small>
+  
+            <label for="emergency-contact">Emergency Contact</label>
+            <input type="text" id="emergency-contact" placeholder="Emergency Contact Name & Number" />
+            <small id="emergency-error" style="color: red;"></small>
+  
+            <label for="patient-profile">Profile Picture</label>
+            <input type="file" id="patient-profile" accept="image/*" />
+            <small id="patient-pic-error" style="color: red;"></small>
+          </div>
+
+          <!-- Spinner -->
+          <div id="spinner" style="display: none; text-align: center;">
+            <img src="./images/spinner.gif" alt="Loading..." style="width: 40px; height: 40px;" />
+          </div>
+          
+  
+          <!-- Submit Button -->
+          <button type="submit">Create Account</button>
+          <p id="signup-success" style="color: green;"></p>
+          <div class="cre">
+            <p>Already have an account</p><a  style="color: red; font-size: 20px;" href="../SignIn Folder/index.html"> sign in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  <script src="./index.js" type="module"></script>    
+</body>
+</html>
