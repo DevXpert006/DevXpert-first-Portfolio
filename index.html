@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevXpert | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon"  href="/DevXpert/ChatGPT Image May 1, 2025, 09_42_13 PM.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#6366f1',
+                            dark: '#818cf8'
+                        },
+                        secondary: {
+                            light: '#f472b6',
+                            dark: '#f9a8d4'
+                        },
+                        accent: {
+                            light: '#f59e0b',
+                            dark: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(45deg, #6366f1, #f472b6);
+        }
+        
+        .dark .gradient-text {
+            background-image: linear-gradient(45deg, #818cf8, #f9a8d4);
+        }
+        
+        .bg-glass {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .dark .bg-glass {
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+
+          @keyframes typing {
+      0% { width: 0 }
+      50% { width: 100% }
+      100% { width: 0 }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    @keyframes changeText {
+      0%   { content: "Frontend Developer"; }
+      50%  { content: "UI/UX Designer"; }
+      100%  { content: "Creative Coder"; }
+      /* 100% { content: "Frontend Developer"; } */
+    }
+
+    .typing::after {
+      content: "Frontend Developer";
+      animation: changeText 9s infinite;
+    }
+
+    .typing {
+      animation: typing 3s steps(40, end) infinite, blink .7s step-end infinite alternate;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+        
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 font-sans transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50" style="background-color: #4B3E5C;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <img style="height: 70px; width: 70px;" src="./DevXpert/ChatGPT Image May 1, 2025, 09_42_13 PM.png" alt="">
+                    <!-- <span class="text-2xl font-bold gradient-text">
+                    </span> -->
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition font-medium">Home</a>
+                    <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition font-medium">About</a>
+                    <a href="#work" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition font-medium">Work</a>
+                    <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition font-medium">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600 transition">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-full bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white dark:bg-slate-800 z-40 pt-24 px-6">
+        <div class="flex flex-col space-y-6">
+            <a href="#home" class="text-2xl font-medium text-gray-800 dark:text-gray-200">Home</a>
+            <a href="#about" class="text-2xl font-medium text-gray-800 dark:text-gray-200">About</a>
+            <a href="#work" class="text-2xl font-medium text-gray-800 dark:text-gray-200">Work</a>
+            <a href="#contact" class="text-2xl font-medium text-gray-800 dark:text-gray-200">Contact</a>
+            <div class="pt-4">
+                <button id="mobile-theme-toggle" class="p-3 rounded-full bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:block"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-32 pb-16 flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary-light/10 to-secondary-light/10 dark:from-primary-dark/10 dark:to-secondary-dark/10"></div>
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1579547945413-497e1b99dac0?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10 dark:opacity-5"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+                        <span class="gradient-text">Hello, I'm Dev Xpert</span>
+                    </h1>
+                    <h1 class="gradient-text"></h1>
+                    
+                    <div class="typing text-2xl font-medium h-10"></div>
+                    <!-- <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-gray-600 dark:text-gray-400">
+                        Creative Developer & UI Designer
+                    </h2> -->
+                    <p class="text-lg mb-10 text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
+                        I craft immersive digital experiences that blend beautiful design with cutting-edge technology to solve real problems.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#work" class="px-8 py-3 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-8 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-full font-medium hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 transition">
+                            Contact Me
+                        </a>
+                        <a href="your-cv-link.pdf" download class="px-8 py-3 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                          Download CV
+                        </a>
+                    </div>
+                    <div class="flex justify-center space-x-5 text-3xl mt-4">
+                        <a href="https://wa.me/2348102606431" target="_blank" class="hover:text-orange-400 transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/" target="_blank" class="hover:text-orange-400 transition"><i class="fab fa-github"></i></a>
+                        <a href="https://" target="_blank" class="hover:text-orange-400 transition"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                
+                      
+                </div>
+                    <div class="relative">
+                    <div class="w-full max-w-md mx-auto aspect-square rounded-full bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark p-1.5">
+                        <div class="w-full h-full rounded-full bg-white dark:bg-slate-800 overflow-hidden">
+                            <!-- Replace with your image -->
+                            <img src="./DevXpert/Miqdad cat.png" alt="Loading">
+                            <!-- <div class="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-600">
+                                <i class="fas fa-user-astronaut text-9xl"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-accent-light dark:bg-accent-dark opacity-20 -z-10"></div>
+                    <div class="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-secondary-light dark:bg-secondary-dark opacity-20 -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="py-20 bg-indigo-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <!-- Stat 1 -->
+            <div class="p-6">
+              <div class="text-4xl font-bold mb-2" data-count="150">5</div>
+              <p class="text-indigo-100">Projects Completed</p>
+            </div>
+            
+            <!-- Stat 2 -->
+            <div class="p-6">
+              <div class="text-4xl font-bold mb-2" data-count="40">0</div>
+              <p class="text-indigo-100">Happy Clients</p>
+            </div>
+            
+            <!-- Stat 3 -->
+            <div class="p-6">
+              <div class="text-4xl font-bold mb-2" data-count="8">1</div>
+              <p class="text-indigo-100">Years Experience</p>
+            </div>
+            
+            <!-- Stat 4 -->
+            <div class="p-6">
+              <div class="text-4xl font-bold mb-2" data-count="12">0</div>
+              <p class="text-indigo-100">Awards Won</p>
+            </div>
+          </div>
+        </div>
+      
+        <script>
+          // Animate counters
+          document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('[data-count]');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-count');
+              const count = +counter.innerText;
+              const increment = target / speed;
+              
+              if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+              } else {
+                counter.innerText = target;
+              }
+            });
+          });
+        </script>
+      </section>
+
+
+
+      <section class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <span class="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">Services</span>
+            <h2 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">What I Offer</h2>
+          </div>
+      
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+
+            <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl hover:shadow-lg transition group">
+              <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                <i class="fas fa-code text-2xl text-indigo-600 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Web Development</h3>
+              <p class="text-gray-600 dark:text-gray-300">Custom website pages built for performance, scalability and for advertisment of your business. using modern tech stacks e.g HTML, CSS and JavaScript</p>
+            </div>
+      
+            <!-- Service 2 -->
+            <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl hover:shadow-lg transition group">
+              <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                <i class="fas fa-paint-brush text-2xl text-indigo-600 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">UI/UX Design</h3>
+              <p class="text-gray-600 dark:text-gray-300">Beautiful interfaces designed for optimal user experience and conversion like business Cards, fliers and Youtube-banners</p>
+            </div>
+      
+            <!-- Service 3 -->
+            <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-xl hover:shadow-lg transition group">
+              <div class="w-14 h-14 bg-indigo-100 dark:bg-indigo-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition">
+                <i class="fas fa-mobile-alt text-2xl text-indigo-600 group-hover:text-white"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">Responsive Website pages for Mobile Phones </h3>
+              <p class="text-gray-600 dark:text-gray-300">A responsive website automatically adapts to any screen size, giving users the best viewing experience across all devices. It’s no longer optional — it's essential.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">Let's create something amazing together. Get in touch today for a free consultation.</p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="px-8 py-3 bg-white text-indigo-600 rounded-full font-bold hover:bg-gray-100 transition shadow-lg hover:shadow-xl">
+              Contact Me
+            </a>
+            <a href="#work" class="px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:bg-white/10 transition">
+              View Portfolio
+            </a>
+          </div>
+        </div>
+      </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sm font-semibold tracking-wider uppercase gradient-text">About Me</span>
+                <h2 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Who I Am</h2>
+                <div class="mt-3 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                    <p>Let me introduce myself and what I do</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 w-full h-full absolute -bottom-6 -right-6 rounded-2xl -z-10"></div>
+                    <div class="bg-glass rounded-2xl overflow-hidden shadow-xl">
+                        <!-- Replace with your image -->
+                        <!-- <div class="w-full h-96 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center"> -->
+                            <img src="./DevXpert/ChatGPT Image May 1, 2025, 09_42_07 PM.png" alt="Loading">
+                        <!-- </div> -->
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">A passionate creator Located at Ibadan</h3>
+                    <div class="space-y-4 text-gray-600 dark:text-gray-400">
+                        <p>
+                          Hi, I’m Hussein Taiwo, a passionate and creative Frontend Developer based in Nigeria, with a focus on building modern, responsive websites and digital solutions that solve real problems and inspire users.
+                        </p>
+                        <p>
+                          With strong proficiency in HTML, CSS, Bootstrap, and JavaScript I’ve built a variety of projects, including a full Hospital Management System with user authentication, dashboards, email verification, profile editing, real-time Firebase database integration, and dynamic appointment booking features.
+                        </p>
+                        <p>
+                          I’ve also developed:
+                        </p>
+                        
+                          <li>
+                            A shopping website with clean structure and user-focused design,
+                          </li>
+                          <li>
+                            A testimonial carousel with swipe/drag support,
+                          </li>
+                          <li>
+                            Interactive live API-powered forms with real-time suggestions,
+                          </li>
+                          <li>
+                            And several personal and business portfolio websites using Tailwind CSS.
+                          </li>
+
+                          <p>
+                            Beyond development, I design business cards, flyers, and video advertisements, 
+                            and have created custom cartoon avatars i.e Youtube-banners and branding logos like the bold “DX” 
+                            identity for DevXpert, my developer alias.
+                          </p>
+                          <p>
+                            I’m constantly improving my skills, exploring backend technologies, 
+                            and aiming to become a top-tier full-stack web developer. 
+                            I’m also passionate about sharing knowledge and helping others grow in tech.
+                          </p>
+                        
+                        
+
+
+
+                        <p>
+                            With over 1 years of experience in web development and design, I specialize in creating beautiful, functional, and user-centered digital experiences.
+                        </p>
+                        <p>
+                            My approach combines technical expertise with an eye for design, ensuring that every project not only works flawlessly but also delights users.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me designing fliers, creating business cards, or experimenting with new apps for designing.
+                        </p>
+                        <p>
+                          
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <span class="block text-sm font-medium text-gray-500 dark:text-gray-400">Name</span>
+                            <span class="block font-semibold">DevXpert</span>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <span class="block text-sm font-medium text-gray-500 dark:text-gray-400">Email</span>
+                            <span class="block font-semibold">devxpert006@
+                              gmail.com</span>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <span class="block text-sm font-medium text-gray-500 dark:text-gray-400">From</span>
+                            <span class="block font-semibold">Nigeria OyoState, Ibadan</span>
+                        </div>
+                        <div class="p-4 bg-gray-50 dark:bg-slate-700 rounded-lg">
+                            <span class="block text-sm font-medium text-gray-500 dark:text-gray-400">Freelance</span>
+                            <span class="block font-semibold">Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work/Projects Section -->
+    <section id="work" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sm font-semibold tracking-wider uppercase gradient-text">Portfolio</span>
+                <h2 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">Featured Projects</h2>
+                <div class="mt-3 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+                    <p>Some of my best and recent works</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="aspect-video bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark flex items-center justify-center">
+                        <!-- <i class="fas fa-globe text-6xl text-white opacity-90"></i> -->
+                        <img src="./DevXpert/3.png" alt="Loading...">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Business Cards</h3>
+                            <p class="text-gray-200 mb-4">A business card is a compact section that showcases your key professional contact details and personal branding </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">photo Shop</span>
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">canva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div class="aspect-video bg-gradient-to-br from-accent-light to-secondary-light dark:from-accent-dark dark:to-secondary-dark flex items-center justify-center">
+                        <!-- <i class="fas fa-mobile-alt text-6xl text-white opacity-90"></i> -->
+                        <img src="./DevXpert/Panda Cartton Channel for Kids/1.png" alt="Loading...">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Youtube-banners</h3>
+                            <p class="text-gray-200 mb-4">For promotion of your video creator</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">pixel lab</span>
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">Photo Shop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300" src="./DevXpert/Second SQI Project/index.html">
+                    <div class="aspect-video bg-gradient-to-br from-secondary-light to-primary-light dark:from-secondary-dark dark:to-primary-dark flex items-center justify-center">
+                        <!-- <i class="fas fa-chart-line text-6xl text-white opacity-90"></i> -->
+                        <img src="./DevXpert/second project.png" alt="Loading...">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Hospital management Dashboard</h3>
+                            <p class="text-gray-200 mb-4">Data visualization platform for hospital business metrics</p>
+                            <div class="flex flex-wrap gap-2"> 
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">html</span>
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">css</span>
+                                <span class="px-2 py-1 bg-white/20 backdrop-blur text-xs rounded text-white">js</span>
+                                <!-- <button 
+                                  src="./DevXpert/Second SQI Project/"
+                                  type="button" 
+                                  class="filter-btn px-6 py-2 rounded-full font-medium transition-all duration-300 active"
+                                  data-filter="all"
+                                    >               
+                                  view project
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="text-center mt-16">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-full font-medium hover:bg-primary-light/10 dark:hover:bg-primary-dark/10 transition">
+                    View All Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div> -->
+        </div>
+
+        
+        <!-- Projects Section -->
+    <section id="projects" style="background-color: #1E293B;" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">My Projects</h2>
+          <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Here are some of my recent works that showcase my skills and experience.</p>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Project 1 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition" style="background-color: #0F172A;">
+                  <img src="./DevXpert/second project.png"></img>
+                  <!-- <div class="h-48 bg-indigo-100 flex items-center justify-center">
+                  </div> -->
+                  <div class="p-6">
+                      <h3 class="text-xl font-semibold mb-2">Hospital Management System</h3>
+                      <p class="text-gray-600 mb-4">A full-featured, responsive web application built with HTML, CSS, JavaScript, Bootstrap, and Firebase to streamline hospital operations.</p>
+                      <div class="flex flex-wrap gap-2 mb-4">
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">HTML</span>
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">CSS</span>
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+                          <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Firebase</span>
+                      </div>
+                      <a href="./DevXpert/Second SQI Project/index.html" class="text-indigo-600 hover:text-indigo-800 font-medium">View Project →</a>
+                  </div>
+              </div>
+              
+              <!-- Project 2 -->
+              <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition" style="background-color: #0F172A;">
+                  <div class="h-48 bg-blue-100 flex items-center justify-center">
+                    <img src="./DevXpert/Recipe finder.png"></img>
+                  </div>
+                  <div class="p-6">
+                      <h3 class="text-xl font-semibold mb-2">RecipeFinder</h3>
+                      <p class="text-gray-600 mb-4">RecipeFinder is a responsive web application built with HTML, CSS, and JavaScript that allows users to search and discover recipes from global cuisines.</p>
+                      <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">HTML</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">CSS</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>                        
+                      </div>
+                      <a href="./DevXpert/Recipe finder.png" class="text-blue-600 hover:text-blue-800 font-medium">View Project →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition" style="background-color: #0F172A;">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <img src="./DevXpert/images/calcullato.png"></img>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Modern Calcullator and Alarm</h3>
+                        <p class="text-gray-600 mb-4">Calculator with Alarm: A modern calculator app styled like a smartphone, featuring basic arithmetic operations, real-time clock, and a built-in alarm system with sound and flashing display alerts.
+                            
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">HTML</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">CSS</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>  
+                        </div>
+                        <a href="./Calcullator/index.html" class="text-blue-600 hover:text-blue-800 font-medium">View Project →</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="text-center mt-12">
+              <!-- <a href="#" class="inline-block border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition">View All Projects</a> -->
+          </div>
+      </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" style="background-color: #0F172A;" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center mb-4">My Skills</h2>
+          <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Technologies and tools I work with on a regular basis.</p>
+          
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <!-- Skill 1 -->
+              <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                  <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-indigo-100 rounded-full text-indigo-600">
+                      <i class="fab fa-html5 text-3xl"></i>
+                  </div>
+                  <h4 class="font-medium">HTML5</h4>
+              </div>
+              
+              <!-- Skill 2 -->
+              <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                  <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-blue-100 rounded-full text-blue-600">
+                      <i class="fab fa-css3-alt text-3xl"></i>
+                  </div>
+                  <h4 class="font-medium">CSS3</h4>
+              </div>
+              
+              <!-- Skill 3 -->
+              <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                  <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gray-100 rounded-full text-gray-600">
+                      <i class="fas fa-fire text-3xl"></i>
+                  </div>
+                  <h4 class="font-medium">Firebase authentication</h4>
+              </div>
+              
+              <!-- Skill 4 -->
+              <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                  <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-blue-100 rounded-full text-blue-600">
+                      <i class="fab fa-github text-3xl"></i>
+                    </div>
+                    <h4 class="font-medium">Github</h4>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-green-100 rounded-full text-green-600">
+                        <i class="fab fa-bootstrap text-3xl"></i>
+                  </div>
+                  <h4 class="font-medium">Bootstrap</h4>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-md transition" style="background-color: #1E293B;">
+                    <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-yellow-100 rounded-full text-yellow-600">
+                        <i class="fab fa-js text-3xl"></i>
+                    </div>
+                    <h4 class="font-medium">JavaScript</h4>
+                </div>
+          </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  
+        <!-- Filtering JavaScript -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterButtons.forEach(button => {
+              button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-white', 'dark:bg-slate-700', 'text-indigo-600', 'dark:text-indigo-400'));
+                button.classList.add('active', 'bg-white', 'dark:bg-slate-700', 'text-indigo-600', 'dark:text-indigo-400');
+
+                // Filter items
+                const filter = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                  if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                  } else {
+                    item.style.display = 'none';
+                  }
+                });
+              });
+            });
+          });
+        </script>
+  
+        <style>
+          /* Animation for filtering */
+          .portfolio-item {
+            transition: all 0.3s ease;
+          }
+
+          /* Tab styling */
+          .filter-btn.active {
+            background-color: white;
+            color: #6366f1;
+          }
+
+          .dark .filter-btn.active {
+            background-color: #1e293b;
+            color: #818cf8;
+          }
+        </style>
+
+
+
+
+
+        
+
+
+
+
+
+          
+            <div class="relative">
+              <!-- Design Carousel Container -->
+              
+            </div>
+          </div>
+        </section>
+        
+        <!-- Swiper JS for Design Carousel -->
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            new Swiper('.design-carousel', {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              loop: true,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
+                },
+              }
+            });
+          });
+        </script>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-sm font-semibold tracking-wider uppercase text-white/80">Get In Touch</span>
+                <h2 class="mt-2 text-3xl font-bold text-white sm:text-4xl">Contact Me</h2>
+                <div class="mt-3 max-w-2xl mx-auto text-lg text-white/90">
+                    <p>Have a project in mind or want to chat? Feel free to reach out!</p>
+                </div>
+            </div>
+            
+            <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 sm:p-12">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send me a message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent bg-white dark:bg-slate-700">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent bg-white dark:bg-slate-700">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark focus:border-transparent bg-white dark:bg-slate-700"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                                Send me a Message
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-slate-700 p-8 sm:p-12">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-light/10 dark:bg-primary-dark/10 p-3 rounded-lg text-primary-light dark:text-primary-dark">
+                                    <i class="fas fa-envelope text-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
+                                    <p class="text-gray-900 dark:text-white font-medium">devxpert006@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-light/10 dark:bg-primary-dark/10 p-3 rounded-lg text-primary-light dark:text-primary-dark">
+                                    <i class="fas fa-phone-alt text-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
+                                    <p class="text-gray-900 dark:text-white font-medium">+234 810 260 6431</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 bg-primary-light/10 dark:bg-primary-dark/10 p-3 rounded-lg text-primary-light dark:text-primary-dark">
+                                    <i class="fas fa-map-marker-alt text-lg"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400">Location</h4>
+                                    <p class="text-gray-900 dark:text-white font-medium">Nigeria, OyoState Ibadan </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="text-lg font-medium text-gray-900 dark:text-white mb-4">Follow Me on</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <!-- <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a> -->
+                                <a href="https://wa.me/2348102606431" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <!-- <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                                    <i class="fab fa-dribbble"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                        <span class="gradient-text">
+                            <img style="height: 40px; width: 30px;" src="./DevXpert/ChatGPT Image May 1, 2025, 09_42_13 PM.png" alt="">
+                        </span>
+                        <span class="ml-2">DevXpert</span>
+                    </h3>
+                    <p class="text-sm">
+                        Creating digital experiences that are beautiful, functional, and user-friendly.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-sm hover:text-white transition">Home</a>
+                        <a href="#about" class="block text-sm hover:text-white transition">About</a>
+                        <a href="#work" class="block text-sm hover:text-white transition">Work</a>
+                        <a href="#contact" class="block text-sm hover:text-white transition">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider text-white mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!-- <a href="#" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a> -->
+                        <a href="https://wa.me/2348102606431" class="w-10 h-10 rounded-full bg-gray-200 dark:bg-slate-600 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+                <p>&copy; 2023 Dev Xpert. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or use system preference
+        const savedTheme = localStorage.getItem('theme') || 
+                          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.add(savedTheme);
+        
+        themeToggle?.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+        
+        mobileThemeToggle?.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
+        
+    </script>
+
+<script>
+  // Image Carousel
+  new Swiper(".image-swiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+
+  // Video Carousel
+  new Swiper(".video-swiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // WhatsApp message content
+    const text = `Hello! You have a new message from your portfolio:\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Message: ${message}`;
+
+    // Encode and redirect to WhatsApp
+    const whatsappURL = `https://wa.me/2348102606431?text=${encodeURIComponent(text)}`;
+    window.location.href = whatsappURL; // Opens in same tab
+  });
+</script>
+
+  
+</body>
+</html>
